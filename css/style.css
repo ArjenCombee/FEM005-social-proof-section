@@ -5,6 +5,7 @@
   --color-neutral-magenta: hsl(303, 10%, 53%);
   --color-neutral-light-magenta: hsl(300, 24%, 96%);
   --color-neutral-white: hsl(0, 0%, 100%);
+  --speed: 200ms;
 }
 *,
 *::before,
@@ -165,6 +166,18 @@ img {
   .card {
     flex-basis: calc((100%) / 3);
     margin: 0 1rem 0 0;
+    transition: filter var(--speed) ease-in, transform var(--speed) ease-in;
+  }
+  .card:hover {
+    filter: brightness(1.2) saturate(1.2);
+    transform: scale(1.2);
+    box-shadow: 2px 2px 5px black;
+  }
+  .card:first-child:hover {
+    transform: scale(1.1) rotate(5deg);
+  }
+  .card:last-child:hover {
+    transform: scale(1.1) rotate(-5deg);
   }
   .card:nth-child(2) {
     align-self: center;
