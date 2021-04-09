@@ -1,5 +1,114 @@
+:root {
+  --font: 'Spartan', sans-serif;
+  --color-primary-magenta: hsl(300, 43%, 22%);
+  --color-primary-pink: hsl(333, 80%, 67%);
+  --color-neutral-magenta: hsl(303, 10%, 53%);
+  --color-neutral-light-magenta: hsl(300, 24%, 96%);
+  --color-neutral-white: hsl(0, 0%, 100%);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 15px;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font);
+  font-weight: 400;
+  background-color: #fff;
+  line-height: 1.5;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* SOCIAL PROOF STYLES */
+.social-proof {
+  max-width: 25rem;
+  padding-top: 5rem;
+  margin: 0 0.5rem;
+}
+.intro,
+.ratings {
+  text-align: center;
+}
+.intro__title {
+  color: var(--color-primary-magenta);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 4rem;
+}
+.intro__body {
+  margin: 1.4rem 0 3rem;
+}
+.rating__item {
+  background-color: var(--color-neutral-light-magenta);
+  margin-bottom: 1.4rem;
+  border-radius: 0.5rem;
+  padding: 1rem 0;
+}
+.rating__item--stars {
+  padding-bottom: 1rem;
+}
+.rating__item--label {
+  color: var(--color-primary-magenta);
+  font-size: 0.9rem;
+}
+.rating__item:last-child {
+  margin-bottom: 3rem;
+}
+.card {
+  background-color: var(--color-primary-magenta);
+  color: var(--color-neutral-white);
+  margin-bottom: 1.4rem;
+  padding: 2.5rem 2rem;
+  border-radius: 0.5rem;
+}
+.card__profile {
+  display: flex;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+.card__profile--name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding-left: 1.5rem;
+}
+.card__profile--photo {
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.card__profile--status {
+  display: block;
+  color: var(--color-primary-pink);
+  font-weight: 400;
+  opacity: 0.9;
+}
+.card__testimonial {
+  line-height: 1.7;
+}
+/* UTILITY STYLES */
+.star {
+  display: inline-block;
+  background: url('../images/icon-star.svg') no-repeat;
+  width: 17px;
+  height: 16px;
+}
+
 /* FRONTENDMENTOR STYLES */
 .attribution {
+  margin-top: 3rem;
   font-size: 11px;
   text-align: center;
 }
